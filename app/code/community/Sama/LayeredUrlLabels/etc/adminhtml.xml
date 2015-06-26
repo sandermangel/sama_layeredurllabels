@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sama_LayeredUrlLabels extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Sama
+ * @package        Sama_LayeredUrlLabels
+ * @copyright      Copyright (c) 2015
+ * @author         Sander Mangel <sander@sandermangel.nl>
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <sama_layeredurllabels translate="title" module="sama_layeredurllabels">
+                                        <title>Layered Url Labels settings</title>
+                                    </sama_layeredurllabels>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

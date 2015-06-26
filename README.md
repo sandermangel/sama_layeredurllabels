@@ -1,0 +1,4 @@
+# Sama_LayeredUrlLabels #
+
+Module changes option IDs into the labels per store and adds the ability via `System > Configuration > Sama > LayeredUrlLabels`
+to define which attribute combinations are accessible for robots.

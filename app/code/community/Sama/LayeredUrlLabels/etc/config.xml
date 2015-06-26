@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sama_LayeredUrlLabels extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Sama
+ * @package        Sama_LayeredUrlLabels
+ * @copyright      Copyright (c) 2015
+ * @author         Sander Mangel <sander@sandermangel.nl>
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+ -->
+<config>
+    <modules>
+        <Sama_LayeredUrlLabels>
+            <version>0.1.0</version>
+        </Sama_LayeredUrlLabels>
+    </modules>
+    <global>
+        <models>
+            <sama_layeredurllabels>
+                <class>Sama_LayeredUrlLabels_Model</class>
+            </sama_layeredurllabels>
+            <catalog>
+                <rewrite>
+                    <layer_filter_item>Sama_LayeredUrlLabels_Model_Catalog_Layer_Filter_Item</layer_filter_item>
+                </rewrite>
+            </catalog>
+        </models>
+        <helpers>
+            <sama_layeredurllabels>
+                <class>Sama_LayeredUrlLabels_Helper</class>
+            </sama_layeredurllabels>
+        </helpers>
+        <blocks>
+            <sama_layeredurllabels>
+                <class>Sama_LayeredUrlLabels_Block</class>
+            </sama_layeredurllabels>
+        </blocks>
+        <events>
+            <controller_action_predispatch_catalog_category_view>
+                <observers>
+                    <sama_layeredurllabels_controller_action_predispatch_catalog_category_view>
+                        <type>singleton</type>
+                        <class>Sama_LayeredUrlLabels_Model_Observer</class>
+                        <method>controllerActionPredispatchCatalogCategoryView</method>
+                    </sama_layeredurllabels_controller_action_predispatch_catalog_category_view>
+                </observers>
+            </controller_action_predispatch_catalog_category_view>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <sama_layeredurllabels_core_block_abstract_to_html_before>
+                        <type>singleton</type>
+                        <class>Sama_LayeredUrlLabels_Model_Observer</class>
+                        <method>coreBlockAbstractToHtmlBefore</method>
+                    </sama_layeredurllabels_core_block_abstract_to_html_before>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
+    </global>
+</config>

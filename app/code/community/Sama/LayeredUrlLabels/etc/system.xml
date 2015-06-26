@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Sama_LayeredUrlLabels extension
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ *
+ * @category       Sama
+ * @package        Sama_LayeredUrlLabels
+ * @copyright      Copyright (c) 2015
+ * @author         Sander Mangel <sander@sandermangel.nl>
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+--> 
+<config>
+    <tabs>
+        <sama translate="label" module="sama_layeredurllabels">
+            <label>Sama</label>
+            <sort_order>2000</sort_order>
+        </sama>
+    </tabs>
+    <sections>
+        <sama_layeredurllabels translate="label" module="sama_layeredurllabels">
+            <class>separator-top</class>
+            <label>Layered Url Labels settings</label>
+            <tab>sama</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>100</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <robots translate="label" module="sama_layeredurllabels">
+                    <label>Robots</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>0</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Set Robots tag</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+                        <attributes translate="label">
+                            <label>Robot accessible attributes</label>
+                            <frontend_model>sama_layeredurllabels/adminhtml_system_attributes</frontend_model>
+                            <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </attributes>
+                    </fields>
+                </robots>
+            </groups>
+        </sama_layeredurllabels>
+    </sections>
+</config>
