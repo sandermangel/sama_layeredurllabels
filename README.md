@@ -6,3 +6,5 @@ to define which attribute combinations are accessible for robots.
 ## ToDo ##
 - optimise retrieving Option ID from label
 - make attribute in `sys>conf` dropdown and set selected value
+- add canonical URL
+- improve syntax of URL
